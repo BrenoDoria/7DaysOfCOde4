@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+ const numeroInicial = Math.floor(Math.random() * 11);
+let tentativas = 3;
+
+while (tentativas > 0) {
+  const chute = prompt(`Digite um número entre 0 e 10. Você tem ${tentativas} tentativas:`);
+  
+  if (chute === null) {
+    break; 
+  }
+  
+  const numeroChutado = parseInt(chute);
+  
+  if (numeroChutado === numeroInicial) {
+    alert("Parabéns, você acertou!");
+    break; 
+  } else {
+    tentativas--;
+    alert("Você errou. Tente novamente.");
+  }
+}
+
+if (tentativas === 0) {
+  document.write (`Suas tentativas acabaram. O número era ${numeroInicial}.`);
+}
+</script>
